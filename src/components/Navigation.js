@@ -4,6 +4,8 @@ import Brightness4Icon from '@material-ui/icons/Brightness4'
 import Brightness7Icon from '@material-ui/icons/Brightness7'
 import IconButton from '@material-ui/core/IconButton'
 import { ThemeContext } from './Context'
+import { Switch } from '@material-ui/core'
+import { FormGroup, FormControlLabel, Typography } from '@material-ui/core'
 
 const Navigaion = () => {
     const [showHamburger, setShowHamburger] = useState(false)
@@ -215,6 +217,35 @@ const Navigaion = () => {
                                 >
                                     hey@viralsangani.me
                                 </a>
+                            </li>
+                            <li className="header-nav__item">
+                                <FormGroup row>
+                                    <FormControlLabel
+                                        control={
+                                            <Switch
+                                                checked={
+                                                    colorMode === 'dark'
+                                                        ? true
+                                                        : false
+                                                }
+                                                onChange={() =>
+                                                    setColorMode(
+                                                        colorMode === 'dark'
+                                                            ? 'light'
+                                                            : 'dark'
+                                                    )
+                                                }
+                                                color="primary"
+                                                name="checkedB"
+                                                inputProps={{
+                                                    'aria-label':
+                                                        'primary checkbox',
+                                                }}
+                                            />
+                                        }
+                                        label={<p>Dark</p>}
+                                    />
+                                </FormGroup>
                             </li>
                         </ul>
                     </div>
