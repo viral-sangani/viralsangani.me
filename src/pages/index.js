@@ -7,6 +7,7 @@ import Main from '../components/Main'
 import Projects from '../components/Projects'
 import Svg from '../../static/images/main-image.svg'
 import AboutMe from '../components/AboutMe'
+import Github from '../components/Github/Github'
 
 const Home = (props) => {
     const siteTitle = 'Viral Sangani'
@@ -29,6 +30,7 @@ const Home = (props) => {
                 <article className="container" style={{ display: 'flex' }}>
                     <Projects projects={projects} />
                     <AboutMe />
+                    <Github />
                 </article>
             </main>
         </Layout>

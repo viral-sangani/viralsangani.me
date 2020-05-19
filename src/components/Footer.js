@@ -28,19 +28,13 @@ const Footer = ({ children }) => {
                             <div className="col-xs-8">
                                 <ul className="list--reset">
                                     <li>
-                                        <a href="https://viralsangani.me">
-                                            Blog{' '}
-                                            <span className="link--dark">
-                                                (Comming soon)
-                                            </span>
+                                        <a href="https://blog.viralsangani.me">
+                                            Blog
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://viralsangani.me">
-                                            Projects{' '}
-                                            <span className="link--dark">
-                                                (Comming soon)
-                                            </span>
+                                        <a href="https://viralsangani.me/projects">
+                                            Projects
                                         </a>
                                     </li>
                                     <li>
@@ -61,9 +55,6 @@ const Footer = ({ children }) => {
                             <li>
                                 <a href="mailto:hey@viralsangani.me">
                                     hey@viralsangani.me
-                                </a>
-                                <a className="link--dark" href="index.html">
-                                    (pgp)
                                 </a>
                             </li>
                             <li>
