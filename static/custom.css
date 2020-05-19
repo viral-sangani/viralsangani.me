@@ -287,3 +287,7 @@
 .footer-text {
     color: var(--font);
 }
+
+.github-icon {
+    vertical-align: center;
+}

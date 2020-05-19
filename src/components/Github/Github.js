@@ -2,7 +2,12 @@ import React from 'react'
 import Section from './Section'
 import ReposStyle from './ReposStyle'
 import FlipMove from 'react-flip-move'
-import Octicon, { Repo, Star, RepoForked } from '@primer/octicons-react'
+import Octicon, {
+    Repo,
+    Star,
+    RepoForked,
+    LogoGithub,
+} from '@primer/octicons-react'
 import { StaticQuery, graphql } from 'gatsby'
 import { langColors } from './extra'
 
@@ -35,7 +40,16 @@ const Github = () => {
                     <Section>
                         <ReposStyle>
                             <header>
-                                <h2>Top Repos</h2>
+                                <h2>
+                                    Top Repos straight from{' '}
+                                    <span>
+                                        <Octicon
+                                            size="medium"
+                                            verticalAlign="middle"
+                                            icon={LogoGithub}
+                                        />
+                                    </span>
+                                </h2>
                             </header>
                             <div className="repo-list">
                                 {topRepos.length > 0 ? (
