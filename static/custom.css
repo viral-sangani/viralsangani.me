@@ -1,0 +1,289 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous + Pro);
+.typewriter h1 {
+    font-family: 'Anonymous Pro', monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid var(--hover-color); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.15em; /* Adjust as needed */
+    animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    font-weight: 900;
+}
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--hover-color);
+    }
+}
+
+.post-content {
+    padding-top: 50px;
+}
+
+.back-btn {
+    font-size: 1em;
+    zoom: 3; /* for easier readability */
+}
+
+.back-btn svg {
+    height: 1em;
+    vertical-align: -0.1875em;
+}
+
+.back-btn span {
+    padding-right: 10px;
+}
+
+.home-container {
+    flex-direction: row;
+}
+
+.home-content {
+    width: 60%;
+}
+
+.about-container {
+    display: flex;
+    height: 60vh;
+}
+
+.home-svg {
+    width: 40%;
+}
+
+.main-name__title {
+    height: 60vh;
+}
+
+.hero__title {
+    font-size: 40px;
+    color: var(--font-color);
+}
+
+.hero__subtitle {
+    text-align: center;
+    font-size: 20px;
+    display: none;
+    color: var(--font-color);
+}
+
+.aboutme {
+    width: 50%;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    .about-container {
+        height: 80vh;
+    }
+    .aboutme {
+        margin-top: 25px;
+        width: 100%;
+    }
+    .home-container {
+        flex-direction: column;
+    }
+    .home-content {
+        width: 100%;
+    }
+
+    .home-svg {
+        width: 100%;
+    }
+    .hero {
+        height: 30vh;
+    }
+    .main-text {
+        display: none;
+    }
+    .main-name__title {
+        height: 40vh;
+    }
+    .hero__subtitle {
+        display: block;
+    }
+    .hero__title {
+        font-size: 30px;
+    }
+    .header-subtitle {
+        display: none;
+    }
+    .header-title {
+        font-size: 20px;
+    }
+}
+
+/******************
+* Resume button
+*******************/
+
+#button {
+    background: #151519;
+    color: #fff;
+    width: 200px;
+    height: 55px;
+    border: 1px solid #5c5c5c;
+    font-size: 20px;
+    border-radius: 4px;
+    transition: 0.6s;
+    overflow: hidden;
+}
+
+#button:focus {
+    outline: none;
+}
+
+#button:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.5s;
+    filter: blur(30px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+
+#button:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translateX(-100px) scaleX(-15deg);
+}
+
+#button:hover {
+    background: var(--hover-color);
+    cursor: pointer;
+    border: 1px solid var(--hover-color);
+}
+
+#button:hover:before {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 0.6;
+    transition: 0.7s;
+}
+
+#button:hover:after {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: 0.7s;
+}
+
+#person-svg {
+    animation: person 1.5s ease alternate;
+}
+
+#popup-svg {
+    opacity: 0;
+    animation: popup 1.5s ease 0s alternate;
+    /* animation: popupnudge 3s linear infinite alternate; */
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+#table-svg {
+    animation: table 1.5s ease alternate;
+}
+
+#extra-svg {
+    display: none;
+    animation: extra 1.5s ease alternate;
+}
+
+@keyframes table {
+    from {
+        transform: translate(0, 53px);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes extra {
+    from {
+        transform: translate(0, -53px);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes popup {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes person {
+    from {
+        transform: translate(0, -53px);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+/*Profile Img*/
+.underlined {
+    flex: 1;
+    /* font-size: 2em; */
+    line-height: 1.2;
+    text-decoration: none;
+    background-image: linear-gradient(
+        to right,
+        var(--hover-color),
+        var(--hover-color)
+    );
+    background-position: 0 1.2em;
+    background-size: 0 50%;
+    background-repeat: no-repeat;
+    transition: background 0.5s;
+}
+
+.underlined:hover {
+    background-size: 100% 100%;
+}
+
+.underlined--offset {
+    background-position: 0 0.2em;
+    box-shadow: inset 0 -0.5em 0 0 var(--background);
+}
+
+.underlined--thin {
+    background-image: linear-gradient(to right, black 0, black 100%);
+}
+
+.underlined--thick {
+    background-position: 0 -0.1em;
+}
+
+.footer-text {
+    color: var(--font);
+}

@@ -1,0 +1,12 @@
+service: blog.viralsangani.me
+
+provider:
+    name: aws
+
+plugins:
+    - serverless-finch
+
+custom:
+    client:
+        bucketName: blog.viralsangani.me
+        distributionFolder: public
