@@ -1,8 +1,8 @@
 {
   "service": {
-    "service": "blog.viralsangani.me",
+    "service": "viralsangani-me",
     "serviceObject": {
-      "name": "blog.viralsangani.me"
+      "name": "viralsangani-me"
     },
     "provider": {
       "stage": "dev",
@@ -148,7 +148,7 @@
     },
     "custom": {
       "client": {
-        "bucketName": "blog.viralsangani.me",
+        "bucketName": "viralsangani.me",
         "distributionFolder": "public"
       }
     },
@@ -162,7 +162,7 @@
     "isDashboardMonitoringPreconfigured": false
   },
   "package": {
-    "artifactDirectoryName": "serverless/blog.viralsangani.me/dev/1589992681368-2020-05-20T16:38:01.368Z",
+    "artifactDirectoryName": "serverless/viralsangani-me/dev/1589993113795-2020-05-20T16:45:13.795Z",
     "artifact": ""
   }
 }

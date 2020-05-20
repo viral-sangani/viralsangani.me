@@ -8,6 +8,20 @@ module.exports = {
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         {
+            resolve: `gatsby-plugin-s3`,
+            options: {
+                bucketName: 'viralsangani.me',
+                protocol: 'https',
+                hostname: 'www.viralsangani.me',
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-zopfli',
+            options: {
+                extensions: ['css', 'html', 'js', 'svg'],
+            },
+        },
+        {
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: `${__dirname}/src/pages`,

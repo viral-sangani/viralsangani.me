@@ -1,4 +1,4 @@
-service: blog.viralsangani.me
+service: viralsangani-me
 
 provider:
     name: aws
