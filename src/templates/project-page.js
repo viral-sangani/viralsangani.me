@@ -23,7 +23,7 @@ export default function ProjectHome(props) {
                             projectTitle={project.title}
                         />
                         <ProjectDetail
-                            content={project.content}
+                            content={project.metadata.content}
                             image={
                                 project.metadata.hero.local.childImageSharp
                                     .fluid
@@ -43,7 +43,6 @@ export const pageQuery = graphql`
             title
             slug
             id
-            content
             metadata {
                 hero {
                     local {
@@ -59,6 +58,7 @@ export const pageQuery = graphql`
                 year
                 color_hex
                 tag_line
+                content
             }
         }
     }

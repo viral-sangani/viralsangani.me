@@ -41,25 +41,27 @@ const aside = ({ year, link, githubLink, projectTitle }) => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-xs-12 col-sm-6 col-md-12 mb-xs-40 mb-md-60">
-                            <div className="filters filters--open filters--small">
-                                <div className="filters__header">
-                                    <h3 className="filters__title">Link</h3>
+                        {link && (
+                            <div className="col-xs-12 col-sm-6 col-md-12 mb-xs-40 mb-md-60">
+                                <div className="filters filters--open filters--small">
+                                    <div className="filters__header">
+                                        <h3 className="filters__title">Link</h3>
+                                    </div>
+                                    <ul className="filters__list">
+                                        <li className="filters__list__item">
+                                            <a
+                                                className="filters__list__link"
+                                                href={link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                {link}
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <ul className="filters__list">
-                                    <li className="filters__list__item">
-                                        <a
-                                            className="filters__list__link"
-                                            href={link}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            {link}
-                                        </a>
-                                    </li>
-                                </ul>
                             </div>
-                        </div>
+                        )}
                         {githubLink && (
                             <div className="col-xs-12 col-sm-6 col-md-12 mb-xs-40 mb-md-60">
                                 <div className="filters filters--open filters--small">

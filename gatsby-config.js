@@ -1,6 +1,6 @@
 module.exports = {
     siteMetadata: {
-        siteUrl: `https://blog.viralsangani.me`,
+        siteUrl: `https://viralsangani.me`,
     },
     plugins: [
         `gatsby-plugin-offline`,

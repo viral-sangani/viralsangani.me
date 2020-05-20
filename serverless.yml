@@ -8,5 +8,5 @@ plugins:
 
 custom:
     client:
-        bucketName: blog.viralsangani.me
+        bucketName: viralsangani.me
         distributionFolder: public

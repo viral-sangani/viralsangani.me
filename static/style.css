@@ -1275,7 +1275,9 @@ h6,
 p,
 .p,
 a,
-.a {
+.a,
+li,
+.li {
     color: var(--font-color);
 }
 
@@ -1459,7 +1461,7 @@ a,
 
 a:hover,
 .link:hover {
-    color: #33b85e;
+    color: var(--hover-color);
     text-decoration: underline;
 }
 
@@ -2782,7 +2784,7 @@ figure {
     text-decoration: underline;
 }
 .user-content a:hover {
-    color: #33b85e;
+    color: var(--hover-color);
 }
 
 .user-content strong {

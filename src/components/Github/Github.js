@@ -17,7 +17,8 @@ const Github = () => {
             query={graphql`
                 query Repodata {
                     allRestApiUsersViralSanganiRepos(
-                        sort: { fields: created_at, order: DESC }
+                        sort: { fields: updated_at, order: DESC }
+                        limit: 6
                     ) {
                         edges {
                             node {
@@ -69,7 +70,11 @@ const Github = () => {
                                                             />
                                                             <h3>{node.name}</h3>
                                                         </div>
-                                                        <p>
+                                                        <p
+                                                            style={{
+                                                                color: 'black',
+                                                            }}
+                                                        >
                                                             {node.description}
                                                         </p>
                                                     </div>

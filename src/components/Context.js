@@ -2,7 +2,9 @@ import React from 'react'
 import { COLORS } from './utils'
 
 function getInitialColorMode() {
-    const persistedColorPreference = window.localStorage.getItem('color-mode')
+    const persistedColorPreference =
+        typeof window !== 'undefined' &&
+        window.localStorage.getItem('color-mode')
     const hasPersistedPreference = typeof persistedColorPreference === 'string'
     // If the user has explicitly chosen light or dark,
     // let's use it. Otherwise, this value will be null.
@@ -11,7 +13,9 @@ function getInitialColorMode() {
     }
     // If they haven't been explicit, let's check the media
     // query
-    const mql = window.matchMedia('(prefers-color-scheme: dark)')
+    const mql =
+        typeof window !== 'undefined' &&
+        window.matchMedia('(prefers-color-scheme: dark)')
     const hasMediaQueryPreference = typeof mql.matches === 'boolean'
     if (hasMediaQueryPreference) {
         return mql.matches ? 'dark' : 'light'
