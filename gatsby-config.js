@@ -7,6 +7,13 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
+        `gatsby-plugin-mdx`,
+        {
+            resolve: 'gatsby-plugin-page-creator',
+            options: {
+                path: `${__dirname}/src/posts`,
+            },
+        },
         {
             resolve: `gatsby-plugin-s3`,
             options: {
