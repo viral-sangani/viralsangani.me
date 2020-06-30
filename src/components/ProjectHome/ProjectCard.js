@@ -9,30 +9,30 @@ export default function ProjectCard({ project }) {
                 <figure className="image" data-component="image">
                     <Link
                         className="image__content h-xs-300 h-md-400"
-                        to={`/projects/${project.slug}/`}
+                        to={`/projects/${project.frontmatter.slug}/`}
                     >
                         <Img
                             Tag="div"
                             className="image__bgimg"
                             fluid={
-                                project.metadata.hero.local.childImageSharp
-                                    .fluid
+                                project.frontmatter.featuredImage
+                                    .childImageSharp.fluid
                             }
-                            backgroundColor={project.metadata.color_hex}
+                            backgroundColor={project.frontmatter.color_hex}
                         />
                         <div
                             className="image__overlay"
                             style={{
-                                backgroundColor: project.metadata.color_hex,
+                                backgroundColor: project.frontmatter.color_hex,
                             }}
                         >
                             <h3 className="h4 image__overlay__title">
-                                {project.title}
+                                {project.frontmatter.title}
                                 <br />
                                 &mdash;
                             </h3>
                             <p className="image__overlay__text">
-                                {project.metadata.tag_line}
+                                {project.frontmatter.tagLine}
                             </p>
                         </div>
                     </Link>
@@ -42,11 +42,11 @@ export default function ProjectCard({ project }) {
                                 className="link--dark link--no-underline"
                                 href="projects/vhi-health-quiz.html"
                             >
-                                {project.title}
+                                {project.frontmatter.title}
                             </a>
                         </h3>
                         <p className="image__title__subtitle">
-                            {project.metadata.tag_line}
+                            {project.frontmatter.tagLine}
                         </p>
                     </figcaption>
                 </figure>

@@ -31,6 +31,13 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
+                path: `${__dirname}/content/projects`,
+                name: `blog`,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
                 path: `${__dirname}/src/pages`,
                 name: 'pages',
             },
@@ -43,25 +50,10 @@ module.exports = {
             },
         },
         {
-            resolve: 'gatsby-source-cosmicjs',
-            options: {
-                bucketSlug: '34de5920-96dc-11ea-85dc-25537f7a5e61',
-                objectTypes: ['projects'],
-                apiAccess: {
-                    read_key:
-                        'LtKwUj4AapzhcgVUGgoMT9sBzVQkter7B4guK74PW4p8tOQj13',
-                },
-                localMedia: true,
-            },
-        },
-        {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
-                // The property ID; the tracking code won't be generated without it
                 trackingId: 'UA-166477510-1',
-                // Defines where to place the tracking script - `true` in the head and `false` in the body
                 head: false,
-                // Avoids sending pageview hits from custom paths
                 pageTransitionDelay: 0,
                 sampleRate: 5,
                 siteSpeedSampleRate: 10,

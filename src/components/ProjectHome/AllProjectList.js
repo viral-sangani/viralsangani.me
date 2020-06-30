@@ -12,7 +12,7 @@ export default function AllProjectList({ projectList }) {
                         return (
                             <div
                                 className="col-xs-12 col-sm-6 col-md-6 col-lg-6 mb-xs-40 mb-md-80"
-                                key={node.id}
+                                key={node.frontmatter.id}
                             >
                                 <figure
                                     className="image"
@@ -20,28 +20,28 @@ export default function AllProjectList({ projectList }) {
                                 >
                                     <Link
                                         className="image__content h-xs-400"
-                                        to={`/projects/${node.slug}/`}
+                                        to={`/projects/${node.frontmatter.slug}/`}
                                     >
                                         <Img
                                             Tag="div"
                                             className="image__bgimg"
                                             fluid={
-                                                node.metadata.hero.local
+                                                node.frontmatter.featuredImage
                                                     .childImageSharp.fluid
                                             }
                                             backgroundColor={
-                                                node.metadata.color_hex
+                                                node.frontmatter.color_hex
                                             }
                                         />
                                         <div
                                             className="image__overlay"
                                             style={{
                                                 backgroundColor:
-                                                    node.metadata.color_hex,
+                                                    node.frontmatter.color_hex,
                                             }}
                                         >
                                             <h3>
-                                                {node.metadata.year}
+                                                {node.frontmatter.year}
                                                 <br />
                                                 &mdash;
                                             </h3>
@@ -54,11 +54,11 @@ export default function AllProjectList({ projectList }) {
                                                 className="link--dark link--no-underline"
                                                 href="projects/feral.html"
                                             >
-                                                {node.title}
+                                                {node.frontmatter.title}
                                             </a>
                                         </h3>
                                         <h4 className="image__title__subtitle">
-                                            {node.metadata.tag_line}
+                                            {node.frontmatter.tagLine}
                                         </h4>
                                     </figcaption>
                                 </figure>

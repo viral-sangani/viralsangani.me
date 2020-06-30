@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image/withIEPolyfill'
+import Img from 'gatsby-image'
 
 export default function ProjectDetail({ content, image, backgroundColor }) {
     return (
@@ -12,6 +12,7 @@ export default function ProjectDetail({ content, image, backgroundColor }) {
             />
             <div
                 className="post-content"
+                style={{ color: '#f2f2f2' }}
                 dangerouslySetInnerHTML={{ __html: content }}
             />
         </article>

@@ -19,12 +19,12 @@ export default function AllProjectAside({ projectList }) {
                                     {projectList.map(({ node }) => (
                                         <li className="filters__list__item">
                                             <Link
-                                                to={`/projects/${node.slug}`}
+                                                to={`/projects/${node.frontmatter.slug}`}
                                                 className={`filters__list__link link--no-underline`}
                                                 style={{ cursor: 'pointer' }}
                                             >
-                                                {node.title} -{' '}
-                                                {node.metadata.year}
+                                                {node.frontmatter.title} -{' '}
+                                                {node.frontmatter.year}
                                             </Link>
                                         </li>
                                     ))}

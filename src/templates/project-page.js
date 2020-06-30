@@ -3,11 +3,15 @@ import React from 'react'
 // import AllProjectAside from './AllProjectAside'
 import Layout from '../components/layout'
 import ProjectAside from '../components/ProjectHome/ProjectAside'
+import { graphql } from 'gatsby'
 import ProjectDetail from '../components/ProjectHome/ProjectDetail'
 
 export default function ProjectHome(props) {
-    const project = props.data.cosmicjsProjects
-    console.log(project)
+    const project = props.data.mdx
+    console.log(
+        'project',
+        project.frontmatter.featuredImage.childImageSharp.fluid
+    )
     return (
         <Layout>
             <main className="main">
@@ -17,18 +21,18 @@ export default function ProjectHome(props) {
                     </div>
                     <div className="row">
                         <ProjectAside
-                            year={project.metadata.year}
-                            link={project.metadata.project_url}
-                            githubLink={project.metadata.github_url}
-                            projectTitle={project.title}
+                            year={project.frontmatter.year}
+                            link={project.frontmatter.project_url}
+                            githubLink={project.frontmatter.github_url}
+                            projectTitle={project.frontmatter.title}
                         />
                         <ProjectDetail
-                            content={project.metadata.content}
+                            content={project.frontmatter.content}
                             image={
-                                project.metadata.hero.local.childImageSharp
-                                    .fluid
+                                project.frontmatter.featuredImage
+                                    .childImageSharp.fluid
                             }
-                            backgroundColor={project.metadata.color_hex}
+                            backgroundColor={project.frontmatter.color_hex}
                         />
                     </div>
                 </div>
@@ -38,27 +42,26 @@ export default function ProjectHome(props) {
 }
 
 export const pageQuery = graphql`
-    query ProjectBySlug($slug: String!) {
-        cosmicjsProjects(slug: { eq: $slug }) {
-            title
-            slug
-            id
-            metadata {
-                hero {
-                    local {
-                        childImageSharp {
-                            fluid(quality: 90, maxWidth: 1920) {
-                                ...GatsbyImageSharpFluid_withWebp
-                            }
+    query MyQuery($slug: String!) {
+        mdx(frontmatter: { slug: { eq: $slug } }) {
+            frontmatter {
+                color_hex
+                github_url
+                index
+                isRecentWork
+                project_url
+                slug
+                tagLine
+                title
+                year
+                content
+                featuredImage {
+                    childImageSharp {
+                        fluid(maxWidth: 1000, quality: 100) {
+                            ...GatsbyImageSharpFluid
                         }
                     }
                 }
-                github_url
-                project_url
-                year
-                color_hex
-                tag_line
-                content
             }
         }
     }

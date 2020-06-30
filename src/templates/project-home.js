@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 
 const ProjectHome = (props) => {
-    const projects = props.data.allCosmicjsProjects.edges
+    const projects = props.data.allMdx.edges
     return (
         <Layout>
             <main className="main">
@@ -23,29 +23,28 @@ const ProjectHome = (props) => {
 export default ProjectHome
 
 export const pageQuery = graphql`
-    query AllProjectQuery {
-        allCosmicjsProjects {
+    query ProjectQuery {
+        allMdx(sort: { fields: frontmatter___index, order: DESC }) {
             edges {
                 node {
-                    title
-                    slug
                     id
-                    metadata {
-                        hero {
-                            local {
-                                childImageSharp {
-                                    fluid(quality: 90, maxWidth: 1920) {
-                                        ...GatsbyImageSharpFluid_withWebp
-                                    }
+                    frontmatter {
+                        title
+                        index
+                        tagLine
+                        year
+                        featuredImage {
+                            childImageSharp {
+                                fluid(quality: 90, maxWidth: 1920) {
+                                    ...GatsbyImageSharpFluid_withWebp
                                 }
                             }
                         }
+                        slug
                         github_url
-                        content
                         project_url
-                        year
+                        isRecentWork
                         color_hex
-                        tag_line
                     }
                 }
             }

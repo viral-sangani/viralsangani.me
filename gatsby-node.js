@@ -22,12 +22,16 @@ exports.createPages = ({ graphql, actions }) => {
             graphql(
                 `
                     {
-                        allCosmicjsProjects {
+                        allMdx(
+                            sort: { fields: frontmatter___index, order: DESC }
+                        ) {
                             edges {
                                 node {
-                                    title
-                                    slug
                                     id
+                                    frontmatter {
+                                        title
+                                        slug
+                                    }
                                 }
                             }
                         }
@@ -40,13 +44,13 @@ exports.createPages = ({ graphql, actions }) => {
                 }
 
                 // Create Project pages.
-                const projects = result.data.allCosmicjsProjects.edges
+                const projects = result.data.allMdx.edges
                 each(projects, (project) => {
                     createPage({
-                        path: `projects/${project.node.slug}`,
+                        path: `projects/${project.node.frontmatter.slug}`,
                         component: projectPage,
                         context: {
-                            slug: project.node.slug,
+                            slug: project.node.frontmatter.slug,
                         },
                     })
                 })

@@ -21,9 +21,15 @@ const Projects = ({ projects }) => {
                 </div>
             </div>
             <div className="row mb-xs-60 mb-md-80">
-                {projects.map(({ node }) => (
-                    <ProjectCard key={node.id} project={node} />
-                ))}
+                {projects.map(({ node }) => {
+                    if (node.frontmatter.isRecentWork) {
+                        console.log(
+                            'node.isRecentWork',
+                            node.frontmatter.isRecentWork
+                        )
+                        return <ProjectCard key={node.id} project={node} />
+                    }
+                })}
             </div>
         </React.Fragment>
     )
