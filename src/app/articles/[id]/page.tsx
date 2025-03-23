@@ -15,7 +15,9 @@ export function generateStaticParams() {
 }
 
 export default async function Article({ params }: { params: { id: string } }) {
-  const articleData = getArticleData(params.id);
+  const resolvedParams = await params;
+  const id = resolvedParams.id;
+  const articleData = await getArticleData(id);
   const { wordCount, readingTime } = getReadingMetrics(articleData.content);
 
   return (

@@ -54,13 +54,13 @@ export function getAllArticles(): ArticleMetadata[] {
   });
 }
 
-export function getArticleData(id: string): {
+export async function getArticleData(id: string): Promise<{
   id: string;
   content: string;
   title: string;
   date: string;
   excerpt: string;
-} {
+}> {
   const fullPath = path.join(articlesDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
