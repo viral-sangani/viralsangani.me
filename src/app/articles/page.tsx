@@ -1,10 +1,9 @@
 import { getAllArticles } from "@/utils/markdown";
-import { getReadingMetrics } from "@/utils/readingMetrics";
 import Link from "next/link";
 import ThemeToggle from "../ThemeToggle";
 import Footer from "../components/Footer";
 
-export default function Articles() {
+export default async function Articles() {
   const articles = getAllArticles();
 
   // Group articles by year
@@ -43,9 +42,6 @@ export default function Articles() {
           <h2 className="year-heading">{year}</h2>
 
           {articlesByYear[year].map((article) => {
-            // Get article content to calculate reading time
-            const { readingTime } = getReadingMetrics(article.content || "");
-
             return (
               <div key={article.id} className="article-item">
                 <div className="article-title-container">

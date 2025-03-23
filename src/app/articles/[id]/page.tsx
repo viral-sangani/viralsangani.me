@@ -14,9 +14,12 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function Article({ params }: { params: { id: string } }) {
-  const resolvedParams = await params;
-  const id = resolvedParams.id;
+export default async function Article({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await Promise.resolve(params);
   const articleData = await getArticleData(id);
   const { wordCount, readingTime } = getReadingMetrics(articleData.content);
 

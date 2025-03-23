@@ -17,9 +17,10 @@ export default function Home() {
 
       <main>
         <p>
-          I'm currently exploring the intersection of blockchain and AI. I'm
-          extremely excited about the new capabilities and possibilities that
-          arise when these two powerful technologies converge.
+          I&apos;m currently exploring the intersection of blockchain and AI.
+          I&apos;m extremely excited about the new capabilities and
+          possibilities that arise when these two powerful technologies
+          converge.
         </p>
 
         <h2 className="section-title">Previously:</h2>
