@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <rect width="900" height="400" fill="#fafafa"/>
+
+  <!-- AI Agent Box -->
+  <rect x="40" y="120" width="140" height="80" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="110" y="155" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a1a">AI AGENT</text>
+  <text x="110" y="175" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a1a">(Speed &amp; Volume)</text>
+
+  <!-- Arrow 1 -->
+  <polygon points="180,160 240,160 240,150 260,160 240,170 240,160" fill="#2196F3"/>
+
+  <!-- Test Suite Box -->
+  <rect x="270" y="50" width="300" height="220" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="420" y="80" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1a1a1a">TEST SUITE</text>
+  <text x="420" y="100" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a1a">(Verification &amp; Guardrails)</text>
+
+  <!-- Venn diagram circles -->
+  <circle cx="380" cy="175" r="55" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="460" cy="175" r="55" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="420" cy="235" r="55" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+
+  <!-- Labels for circles -->
+  <text x="360" y="155" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a1a">Unit</text>
+  <text x="360" y="170" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a1a">Tests</text>
+  <text x="480" y="155" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a1a">E2E</text>
+  <text x="480" y="170" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1a1a1a">Tests</text>
+  <text x="420" y="260" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a1a">Integration</text>
+  <text x="420" y="275" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a1a">Tests</text>
+
+  <!-- Arrow 2 -->
+  <polygon points="570,160 630,160 630,150 650,160 630,170 630,160" fill="#2196F3"/>
+
+  <!-- Reliable Code Box -->
+  <rect x="660" y="120" width="180" height="80" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="750" y="155" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a1a1a">RELIABLE CODE</text>
+  <text x="750" y="175" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1a1a1a">(Shipping Value)</text>
+
+  <!-- Feedback loop arrow -->
+  <path d="M 270,270 L 270,320 L 110,320 L 110,200" fill="none" stroke="#2196F3" stroke-width="2"/>
+  <polygon points="110,200 105,215 115,215" fill="#2196F3"/>
+
+  <!-- Dashed part of feedback loop -->
+  <path d="M 270,270 L 200,270" fill="none" stroke="#2196F3" stroke-width="2" stroke-dasharray="8,4"/>
+
+  <!-- Feedback Loop label -->
+  <text x="200" y="340" font-family="Arial, sans-serif" font-size="12" fill="#1a1a1a">Feedback Loop</text>
+  <text x="200" y="355" font-family="Arial, sans-serif" font-size="11" fill="#1a1a1a">(Failed Tests)</text>
+
+  <!-- Caption -->
+  <text x="450" y="385" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1a1a1a">
+    <tspan font-weight="bold">The AI Readiness Flow:</tspan> Tests act as the critical filter for autonomous code generation.
+  </text>
+</svg>
