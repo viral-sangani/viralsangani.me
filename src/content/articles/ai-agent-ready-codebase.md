@@ -24,7 +24,7 @@ An autonomous agent can generate a week's worth of boilerplate, refactoring, and
 
 If your codebase relies on manual QA, human code review, or "clicking around to see if it breaks," you have already lost. You cannot manually review code as fast as a modern LLM can write it. You will create a bottleneck so severe that you'll be forced to ask your devs to stop using the tools.
 
-![Without automated tests, AI speed creates a verification bottleneck](/images/ai-agent-without-tests.svg)
+![Without automated tests, AI speed creates a verification bottleneck](/images/ai-agent-without-tests.png)
 
 ## Tests Are the "Tracks"
 
@@ -40,7 +40,7 @@ When you have solid tracks:
 
 Without the tracks? That high-speed bullet train just derails into a field of technical debt.
 
-![The AI Readiness Flow: Tests act as the critical filter for autonomous code generation](/images/ai-agent-with-tests.svg)
+![The AI Readiness Flow: Tests act as the critical filter for autonomous code generation](/images/ai-agent-with-tests.png)
 
 ## "AI Readiness" Is Just Good Engineering
 
