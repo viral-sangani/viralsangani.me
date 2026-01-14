@@ -1,6 +1,6 @@
 ---
 title: "The Prerequisite for AI Agents: Making Your Codebase Agent-Ready"
-date: "2025-12-28"
+date: "2026-01-14"
 excerpt: "Stop buying AI tools if you aren't willing to invest in the infrastructure they run on. The secret to AI adoption isn't prompt engineering—it's test coverage."
 ---
 
