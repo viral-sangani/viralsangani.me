@@ -224,6 +224,14 @@ body {
   font-style: italic;
 }
 
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
 .back-link {
   display: inline-block;
   margin-bottom: 20px;
